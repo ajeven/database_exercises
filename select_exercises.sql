@@ -1,0 +1,13 @@
+USE codeup_test_db;
+SELECT 'Pink Floyd Albums:' as '--------------';
+SELECT album_name as "Album" FROM albums WHERE artist = 'Pink Floyd';
+SELECT 'Sgt Peppers Release date:' as '--------------';
+SELECT  album_name, release_date FROM albums WHERE artist = 'The Beatles';
+SELECT 'Nirvana Info:' as '--------------';
+SELECT album_name, genre FROM albums WHERE artist = 'Nirvana';
+SELECT 'Albums released before 1990:' as '--------------';
+SELECT album_name FROM albums WHERE release_date < '1990';
+SELECT 'More than 20 million sold:' as '--------------';
+SELECT album_name FROM albums WHERE sales > 20;
+SELECT 'All albums with a rock genre:' as '--------------';
+SELECT album_name FROM albums WHERE genre LIKE '%rock%';
